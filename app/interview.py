@@ -31,8 +31,8 @@ def index():
     return render_template("index.html", scripts=SCRIPTS)
 
 @app.route("/ao")
-def index():
-    print("index")
+def ao():
+    print("ao index")
     return render_template("index.html", scripts=SCRIPTS)
 
 @app.route("/api/start", methods=["POST"])
