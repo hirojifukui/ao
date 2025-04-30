@@ -1,7 +1,13 @@
-import os
-from flask import Flask, render_template
+# AO/app/__init__.py
 
-app = Flask(__name__)
-print("→ URL map:", app.url_map)
-print("importing app")
-from app import interview
+from flask import Flask
+
+# create your Flask app, telling it where to find static & template folders
+app = Flask(
+    __name__,
+    static_folder="static",
+    template_folder="templates"
+)
+
+# import your routes (so decorators get registered)
+from app.interview import *    # noqa
